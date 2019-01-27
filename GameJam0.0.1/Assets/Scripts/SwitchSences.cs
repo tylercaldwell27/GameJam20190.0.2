@@ -20,7 +20,7 @@ public class SwitchSences : MonoBehaviour
         //gets the active scene from the buildIndex and plays the next scene after
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         reset = true;
-
+        ScoreScript.scoreValue = 0;
     }
     
 }

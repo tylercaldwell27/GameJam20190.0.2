@@ -14,7 +14,8 @@ public class ScoreScript : MonoBehaviour
     public void Start()
     {
         score.GetComponent<Text>();
-        
+        SwitchSences playAgian = new SwitchSences();
+      
     }
 
     // Update is called once per frame
@@ -25,12 +26,8 @@ public class ScoreScript : MonoBehaviour
         if(SceneManager.GetActiveScene().buildIndex == 3)
         {
             score.text = "Your Score Was:" + scoreValue;
-            SwitchSences playAgian = new SwitchSences();
-            if(playAgian.reset == true)
-            {
-                scoreValue = 0;
-                playAgian.reset = false;
-            }
+            
+            
         }
 
     }
