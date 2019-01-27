@@ -70,10 +70,8 @@ public class PlayerControllerRepair : MonoBehaviour
 
             if (atFirstFloorDoor)
             {
-                // player goes to 2nd floor
-                //this.transform.position = doorUpstairs.position;
                 this.transform.Translate(0, teleportoffset, 0);
-                Debug.Log("Player is at 1st Floor Door");
+                //Debug.Log("Player is at 1st Floor Door");
             }
 
             if (!atFirstFloorDoor)

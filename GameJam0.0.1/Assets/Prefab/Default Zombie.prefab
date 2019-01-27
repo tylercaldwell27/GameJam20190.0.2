@@ -100,6 +100,8 @@ MonoBehaviour:
   ignoreCol:
     serializedVersion: 2
     m_Bits: 2048
+  atFirstFloorDoor: 0
+  teleportoffset: -1.8
 --- !u!114 &3530772853048743814
 MonoBehaviour:
   m_ObjectHideFlags: 0
