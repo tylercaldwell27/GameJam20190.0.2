@@ -10,6 +10,7 @@ public class Gun : MonoBehaviour
     public float fireRate = 0;
     public float Damage = 30;
     public LayerMask whatToHit;
+    public AudioSource gunShot;
 
     public Transform BulletTrailPrefab;
 
@@ -17,6 +18,11 @@ public class Gun : MonoBehaviour
     Transform firePoint;
     EnemyHealthSystem enemyDamage = new EnemyHealthSystem();
     // Start is called before the first frame update
+    public void GunShot()
+    {
+        gunShot.Play();
+    }
+
     void Awake()
     {
 
@@ -37,6 +43,7 @@ public class Gun : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 Shoot();
+                GunShot();
             }
             else
             {
@@ -68,7 +75,6 @@ public class Gun : MonoBehaviour
             {
                 EnemyHealthSystem enemyHealthScript = hit.transform.GetComponent<EnemyHealthSystem>();
                 enemyHealthScript.DeductHealth(Damage);
-             
             }
 
 
